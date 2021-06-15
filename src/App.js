@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchAccounts} from './actions/fetchAccounts'
+import AccountsContainer from './containers/AccountsContainer'
 
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        App
+        <AccountsContainer/>
       </div>
     )
   }
@@ -20,4 +20,4 @@ class App extends React.Component {
 
 
 
-export default connect(null, {fetchAccounts})(App);
+export default App;
