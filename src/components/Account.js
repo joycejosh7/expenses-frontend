@@ -1,13 +1,13 @@
 import React from 'react'
-import {Redirect} from 'react-router-dom'
-// import AccountEdit from './AccountEdit'
+// import {Redirect} from 'react-router-dom'
+import AccountEdit from './AccountEdit'
 
-// import TransactionsContainer from '../containers/TransactionsContainer'
+import TransactionsContainer from '../containers/TransactionsContainer'
 
 const Account = (props) => {
 
-  // let account = props.accounts[props.match.params.id - 1]
-  let account = props.accounts.filter(account => account.id === props.match.params.id)[0]
+//   let account = props.accounts[props.match.params.id - 1]
+  let account = props.accounts.filter(account => account.id == props.match.params.id)[0]
 
   return (
 
@@ -15,9 +15,9 @@ const Account = (props) => {
       <h2>
         {account ? account.name : null} - {account ? account.balance : null}
       </h2>
-      {/* <TransactionsContainer account={account}/><br/> */}
+      <TransactionsContainer account={account}/><br/>
       <h4>Edit Account</h4>
-      {/* <AccountEdit account={account}/> */}
+      <AccountEdit account={account}/>
     </div>
   )
 
